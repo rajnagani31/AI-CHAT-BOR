@@ -1,16 +1,15 @@
-
+from openai import OpenAI
 from dotenv import load_dotenv
 import streamlit as st
-import os,openai
+import os
 from system_prompt import SYSTEM_PROMPT
 # load_dotenv()
-# api_key=st.secrets["GEMINI_API_KEY"]
-# client=OpenAI(
-#     api_key=api_key,
-#     base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
-# )
+api_key=st.secrets["GEMINI_API_KEY"]
+client=OpenAI(
+    api_key=api_key,
+    base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
+)
 # client=OpenAI()
-openai.api_key = st.secrets["OPENAI_API_KEY"]
 with st.sidebar:
     with st.expander("Information abot chat bot"):
         st.write("""
@@ -40,7 +39,7 @@ if query:
     st.subheader(f"🚀{query}")
     if not query:
         st.info("Plese write your question")
-    response=openai.completions.create(
+    response=client.chat.completions.create(
         # model="gemini-2.5-flash",
         model='gpt-4.1-nano',
         messages=[
