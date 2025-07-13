@@ -4,7 +4,7 @@ import streamlit as st
 import os
 from system_prompt import SYSTEM_PROMPT
 load_dotenv()
-api_key=st.secrets["GEMINI_API_KEY"]
+# api_key=st.secrets["GEMINI_API_KEY"]
 # client=OpenAI(
 #     api_key=api_key,
 #     base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
