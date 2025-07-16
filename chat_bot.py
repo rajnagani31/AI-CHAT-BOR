@@ -10,9 +10,12 @@ load_dotenv()
 #     api_key=api_key,
 #     base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
 # )
-client=OpenAI(os.environ['OPENAI_API_KEY'])
+client=OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 # openai.api_key = os.environ['OPENAI_API_KEY']
-
+if "OPENAI_API_KEY" not in st.secrets:
+    st.error("❌ OPENAI_API_KEY not found in secrets!")
+else:
+    st.success("✅ API key loaded!")
 with st.sidebar:
     with st.expander("Information abot chat bot"):
         st.write("""
