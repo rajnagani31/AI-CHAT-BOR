@@ -1,7 +1,7 @@
 from openai import OpenAI
 from dotenv import load_dotenv
 import streamlit as st
-# import os
+import os
 from system_prompt import SYSTEM_PROMPT
 load_dotenv()
 # api_key=st.secrets["GEMINI_API_KEY"]
@@ -10,7 +10,9 @@ load_dotenv()
 #     api_key=api_key,
 #     base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
 # )
-client=OpenAI()
+client=OpenAI(os.environ['OPENAI_API_KEY'])
+# openai.api_key = os.environ['OPENAI_API_KEY']
+
 with st.sidebar:
     with st.expander("Information abot chat bot"):
         st.write("""
