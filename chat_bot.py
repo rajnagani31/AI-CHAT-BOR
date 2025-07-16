@@ -1,8 +1,7 @@
 from openai import OpenAI
 from dotenv import load_dotenv
 import streamlit as st
-import os
-from chat.key import GEMINI_API_KEY
+# import os
 from system_prompt import SYSTEM_PROMPT
 load_dotenv()
 # api_key=st.secrets["GEMINI_API_KEY"]
