@@ -1,7 +1,7 @@
 from openai import OpenAI
 from dotenv import load_dotenv
 import streamlit as st
-from google import generativeai
+# from google import generativeai
 import os
 from system_prompt import SYSTEM_PROMPT
 from bot import bot_call
