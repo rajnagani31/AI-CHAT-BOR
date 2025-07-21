@@ -7,7 +7,7 @@ from google.genai.types import GenerateContentConfig, HttpOptions
 # from chat_bot import query
 
 load_dotenv()
-client = genai.Client()
+client = genai.Client(http_options=HttpOptions(api_version="v1"))
 
 # api_key=st.secrets["GEMINI_API_KEY"]
 # api_key=str(GEMINI_API_KEY)
