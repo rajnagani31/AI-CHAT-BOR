@@ -1,4 +1,4 @@
-from openai import OpenAI
+# from openai import OpenAI
 from dotenv import load_dotenv
 import streamlit as st
 # from google import generativeai

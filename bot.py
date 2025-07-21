@@ -1,6 +1,6 @@
-from openai import OpenAI
+# from openai import OpenAI
 from dotenv import load_dotenv
-import os
+# import os
 from system_prompt import SYSTEM_PROMPT
 from google import genai
 from google.genai.types import GenerateContentConfig, HttpOptions
